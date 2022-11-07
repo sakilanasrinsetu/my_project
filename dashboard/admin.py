@@ -1,6 +1,9 @@
 from unicodedata import category
 from django.contrib import admin
-from .models import Category, Product
+from .models import Category, Product, UserProfile, Venue
+
+
+from django.conf import settings
 
 # Register your models here.
 
@@ -23,3 +26,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Product, ProductAdmin)
+
+admin.site.register(UserProfile)
+
+

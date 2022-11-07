@@ -40,3 +40,4 @@ class ProductDetailsSerializer(serializers.ModelSerializer):
             serializer = CategorySerializer(obj.category)
             return serializer.data
         return None
+

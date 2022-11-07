@@ -113,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Dhaka'
 
 USE_I18N = True
 
@@ -126,8 +126,37 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+STATIC_ROOT = os.path.join('static_cdn', 'static_root')
+MEDIA_ROOT = os.path.join('static_cdn', 'media_root')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SITE_ID = 1
+
+
+# For Google MAP............
+
+
+GOOGLE_MAPS_API_KEY = "AIzaSyCjopISadLJASXLKwPy-V47Jbdc1wFJWDg"
+
+GOOGLE_API_KEY = config('GOOGLE_API_KEY')
+
+RECAPTCHA_KEY = config('RECAPTCHA_KEY')
+
+
+RECAPTCHA_SECTET_KEY = config('RECAPTCHA_SECTET_KEY')
+
+# RECAPTCHA_PUBLIC_KEY = ""
+
+# RECAPTCHA_PRIVATE_KEY = ""
+
